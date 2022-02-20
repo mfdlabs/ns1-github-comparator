@@ -1,10 +1,10 @@
 ;
 ;  Database file rbx.com.dns for Default Zone scope in zone rbx.com.
-;      Zone version:  1645160643
+;      Zone version:  1645318439
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
-                        		1645160643         ; serial number
+@ 					  IN	SOA dns1.p07.nsone.net. hostmaster.nsone.net. (
+                        		1645318439         ; serial number
                         		43200         ; refresh
                         		7200         ; retry
                         		1209600         ; expire
