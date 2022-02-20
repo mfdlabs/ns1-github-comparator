@@ -136,23 +136,15 @@ func doWork(client *ns1.Client) {
 	}
 
 	// 4. Push the dns files to the repo
-	err = pushToRepo(commitMessage)
-
-	if err != nil {
-		log.Fatal(err)
-	}
+	pushToRepo(commitMessage)
 }
 
-func pushToRepo(commitMessage string) error {
+func pushToRepo(commitMessage string) {
 	// Push the dns files to the repo
 	cmd := exec.Command("git", "add", "ns1")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	err := cmd.Run()
-
-	if err != nil {
-		return err
-	}
+	cmd.Run()
 
 	author := *githubAuthor
 
@@ -163,22 +155,12 @@ func pushToRepo(commitMessage string) error {
 	cmd = exec.Command("git", "commit", "--author", author, "-m", "\""+commitMessage+"\"")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	err = cmd.Run()
+	cmd.Run()
 
-	if err != nil {
-		return err
-	}
-
-	cmd = exec.Command("git", "push")
+	cmd = exec.Command("git", "push", "origin", "master")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	err = cmd.Run()
-
-	if err != nil {
-		return err
-	}
-
-	return nil
+	cmd.Run()
 }
 
 func runNs1ToZoneFile() error {
@@ -217,6 +199,9 @@ func writeToCache(json []byte, zone string, commitMessage *string) error {
 			*commitMessage += fmt.Sprintf("\n~The Zone (%s) was modified since the last check.\n", zone)
 		}
 
+	} else {
+		// the zone is new?? May still be on github, but not on cache.
+		*commitMessage += fmt.Sprintf("\n~The Zone (%s) was added since the last check.\n", zone)
 	}
 
 	// create the cache directory if it doesn't exist
