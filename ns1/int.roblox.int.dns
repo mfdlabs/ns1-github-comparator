@@ -1,0 +1,42 @@
+;
+;  Database file int.roblox.int.dns for Default Zone scope in zone int.roblox.int.
+;      Zone version:  1606771133
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1606771133         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p07.nsone.net.
+@ 					  IN	NS	dns2.p07.nsone.net.
+@ 					  IN	NS	dns3.p07.nsone.net.
+@ 					  IN	NS	dns4.p07.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+a.b					  IN	A	10.1.1.11
+c.d					  IN	A	10.1.1.12
+corp					  IN	A	10.1.1.1
+corp					  IN	CNAME	test2.int.roblox.int.
+f					  IN	A	10.1.1.14
+rye					  IN	CNAME	corp.int.roblox.int.
+test1					  IN	A	10.1.1.1
+test11					  IN	A	10.1.1.16
+test2					  IN	A	10.1.1.2
+test21					  IN	A	10.1.1.12
+test3					  IN	CNAME	10.1.1.3.
+test5					  IN	A	10.1.1.1
+test6					  IN	A	10.10.1.1

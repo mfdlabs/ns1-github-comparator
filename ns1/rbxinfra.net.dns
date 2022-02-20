@@ -1,0 +1,37 @@
+;
+;  Database file rbxinfra.net.dns for Default Zone scope in zone rbxinfra.net.
+;      Zone version:  1605205511
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1605205511         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p08.nsone.net.
+@ 					  IN	NS	dns2.p08.nsone.net.
+@ 					  IN	NS	dns3.p08.nsone.net.
+@ 					  IN	NS	dns4.p08.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+ns01					  IN	A	157.53.225.1
+ns01					  IN	AAAA	2607:f740:e00b::1.
+ns02					  IN	A	157.53.225.65
+ns02					  IN	AAAA	2607:f740:e00b:4::1.
+ns03					  IN	A	157.53.225.129
+ns03					  IN	AAAA	2607:f740:e00b:8::1.
+ns04					  IN	A	157.53.225.193
+ns04					  IN	AAAA	2607:f740:e00b:c::1.

@@ -1,0 +1,73 @@
+;
+;  Database file robloxdev.cn.dns for Default Zone scope in zone robloxdev.cn.
+;      Zone version:  1642187185
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1642187185         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p06.nsone.net.
+@ 					  IN	NS	dns2.p06.nsone.net.
+@ 					  IN	NS	dns3.p06.nsone.net.
+@ 					  IN	NS	dns4.p06.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+*.api					  IN	CNAME	prod-gateway-out.robloxdev.cn.
+*.rbxcdn					  IN	CNAME	prod-gateway-out.robloxdev.cn.
+*.s				600	IN	CNAME	any.s.robloxdev.cn.d.rbxinfra.cn.
+api					  IN	CNAME	prod-gateway-out.robloxdev.cn.
+c0.c				600	IN	CNAME	c0.c.robloxdev.cn.d.rbxinfra.cn.
+c1.c				600	IN	CNAME	c1.c.robloxdev.cn.d.rbxinfra.cn.
+c2.c				600	IN	CNAME	c2.c.robloxdev.cn.d.rbxinfra.cn.
+c3.c				600	IN	CNAME	c3.c.robloxdev.cn.d.rbxinfra.cn.
+c4.c				600	IN	CNAME	c4.c.robloxdev.cn.d.rbxinfra.cn.
+c5.c				600	IN	CNAME	c5.c.robloxdev.cn.d.rbxinfra.cn.
+c6.c				600	IN	CNAME	c6.c.robloxdev.cn.d.rbxinfra.cn.
+c7.c				600	IN	CNAME	c7.c.robloxdev.cn.d.rbxinfra.cn.
+corp				600	IN	CNAME	corp.robloxdev.cn.d.rbxinfra.cn.
+create					  IN	CNAME	create.robloxdev.cn.cdn.dnsv1.com.
+css.c				600	IN	CNAME	css.c.robloxdev.cn.d.rbxinfra.cn.
+dev-gateway-out					  IN	A	106.53.111.10
+dev				600	IN	CNAME	dev.robloxdev.cn.d.rbxinfra.cn.
+edu				600	IN	CNAME	edu.robloxdev.cn.d.rbxinfra.cn.
+forum					  IN	CNAME	prod-gateway-out.robloxdev.cn.
+images.c				600	IN	CNAME	images.c.robloxdev.cn.d.rbxinfra.cn.
+infra-hkg					  IN	A	101.32.219.20
+infra-lax					  IN	CNAME	lax-gateway-out.robloxdev.cn.
+js.c				600	IN	CNAME	js.c.robloxdev.cn.d.rbxinfra.cn.
+lax-gateway-out					  IN	A	170.106.135.160
+learn				600	IN	CNAME	learn.robloxdev.cn.d.rbxinfra.cn.
+monitor					  IN	CNAME	prod-gateway-out.robloxdev.cn.
+prod-gateway-out					  IN	A	106.55.220.195
+rna					  IN	CNAME	rna.robloxdev.cn.d.rbxinfra.cn.
+@					  IN	CNAME	robloxdev.cn.d.rbxinfra.cn.
+@					  IN	TXT	"202004231249394fd6zcwxj2ztfyh55dthwyy6eomgxnvpkxrl2f9qyq5c540xys"
+setup.c				600	IN	CNAME	setup.c.robloxdev.cn.d.rbxinfra.cn.
+sha-gateway-out					  IN	A	212.129.233.189
+static.c				600	IN	CNAME	static.c.robloxdev.cn.d.rbxinfra.cn.
+t0.c				600	IN	CNAME	t0.c.robloxdev.cn.d.rbxinfra.cn.
+t1.c				600	IN	CNAME	t1.c.robloxdev.cn.d.rbxinfra.cn.
+t2.c				600	IN	CNAME	t2.c.robloxdev.cn.d.rbxinfra.cn.
+t3.c				600	IN	CNAME	t3.c.robloxdev.cn.d.rbxinfra.cn.
+t4.c				600	IN	CNAME	t4.c.robloxdev.cn.d.rbxinfra.cn.
+t5.c				600	IN	CNAME	t5.c.robloxdev.cn.d.rbxinfra.cn.
+t6.c				600	IN	CNAME	t6.c.robloxdev.cn.d.rbxinfra.cn.
+t7.c				600	IN	CNAME	t7.c.robloxdev.cn.d.rbxinfra.cn.
+tr.c				600	IN	CNAME	tr.c.robloxdev.cn.d.rbxinfra.cn.
+vpn				600	IN	CNAME	vpn.robloxdev.cn.d.rbxinfra.cn.
+www					  IN	CNAME	www.robloxdev.cn.cdn.dnsv1.com.

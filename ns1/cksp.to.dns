@@ -1,0 +1,31 @@
+;
+;  Database file cksp.to.dns for Default Zone scope in zone cksp.to.
+;      Zone version:  1606770998
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1606770998         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p07.nsone.net.
+@ 					  IN	NS	dns2.p07.nsone.net.
+@ 					  IN	NS	dns3.p07.nsone.net.
+@ 					  IN	NS	dns4.p07.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+@					  IN	A	35.186.206.194
+www					  IN	A	35.186.206.194

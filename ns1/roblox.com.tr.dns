@@ -1,0 +1,31 @@
+;
+;  Database file roblox.com.tr.dns for Default Zone scope in zone roblox.com.tr.
+;      Zone version:  1606771603
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1606771603         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p02.nsone.net.
+@ 					  IN	NS	dns2.p02.nsone.net.
+@ 					  IN	NS	dns3.p02.nsone.net.
+@ 					  IN	NS	dns4.p02.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+@				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.
+www				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.

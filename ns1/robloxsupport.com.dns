@@ -1,0 +1,33 @@
+;
+;  Database file robloxsupport.com.dns for Default Zone scope in zone robloxsupport.com.
+;      Zone version:  1606772552
+;
+
+@ 					  IN	SOA . hostmaster.nsone.net. (
+                        		1606772552         ; serial number
+                        		3600         ; refresh
+                        		600         ; retry
+                        		604800         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p07.nsone.net.
+@ 					  IN	NS	dns2.p07.nsone.net.
+@ 					  IN	NS	dns3.p07.nsone.net.
+@ 					  IN	NS	dns4.p07.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+_dmarc				600	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:dmarc_fb@roblox.com; ruf=mailto:dmarc_fr@roblox.com; pct=100"
+@				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.
+@				600	IN	TXT	"v=spf1 -all"
+www				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.
