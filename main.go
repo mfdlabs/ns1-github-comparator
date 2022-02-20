@@ -17,6 +17,7 @@ import (
 	"time"
 
 	ns1 "gopkg.in/ns1/ns1-go.v2/rest"
+	"gopkg.in/ns1/ns1-go.v2/rest/model/dns"
 )
 
 var (
@@ -114,6 +115,18 @@ func doWork(client *ns1.Client) {
 
 	// 2. Iterate over the zones and serialize them to json
 	for _, zone := range zones {
+		if checkAlreadyExistingSerial(zone.Zone, zone.Serial) {
+			log.Printf("Skipping zone %s, already up to date. Serial: %d\n", zone.Zone, zone.Serial)
+			continue
+		}
+
+		// zone has to be rewritten here because it has minimal information
+		zone, _, err = client.Zones.Get(zone.Zone)
+
+		if err != nil {
+			log.Fatal(err)
+		}
+
 		// serialize the zone to json using encoding/json
 		json, err := json.Marshal(zone)
 
@@ -136,7 +149,39 @@ func doWork(client *ns1.Client) {
 	}
 
 	// 4. Push the dns files to the repo
-	pushToRepo(commitMessage)
+	// also run this in the background, so we don't have to wait for it to finish
+	go func() {
+		pushToRepo(commitMessage)
+	}()
+}
+
+func checkAlreadyExistingSerial(zoneName string, newSerial int) bool {
+	// this method will check if there's an already existing zone file in the cache directory
+	// and will then parse the json and return the serial number
+
+	// check if the zone file exists in the cache directory
+	if _, err := os.Stat("ns1_dns_json_cache/" + zoneName + ".json"); err == nil {
+		// if it does, open it and parse the json
+		file, err := os.Open("ns1_dns_json_cache/" + zoneName + ".json")
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		defer file.Close()
+
+		var zone dns.Zone
+		decoder := json.NewDecoder(file)
+		err = decoder.Decode(&zone)
+
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// return the serial number
+		return zone.Serial == newSerial
+	}
+
+	return false
 }
 
 func pushToRepo(commitMessage string) {
