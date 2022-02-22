@@ -21,10 +21,12 @@ import (
 )
 
 var (
-	ns1url       = flag.String("ns1-url", "", "The URL for the NS1 API, warning: It has to be prepended with a slash or ns1 client will just strip out the last part of the URL")
-	fetchTimeout = flag.Duration("fetch-timeout", 30*time.Second, "The timeout for the fetch operation in the background, this cannot be less than 30 seconds")
-	githubAuthor = flag.String("github-author", "", "The author name for the commit message")
+	ns1UrlFlag       = flag.String("ns1-url", "", "The URL for the NS1 API, warning: It has to be prepended with a slash or ns1 client will just strip out the last part of the URL")
+	fetchTimeoutFlag = flag.Duration("fetch-timeout", 30*time.Second, "The timeout for the fetch operation in the background, this cannot be less than 30 seconds")
+	githubAuthorFlag = flag.String("github-author", "", "The author name for the commit message")
 )
+
+var githubAuthor string
 
 func main() {
 	flag.Usage = func() {
@@ -34,13 +36,36 @@ func main() {
 
 	flag.Parse()
 
-	if *ns1url == "" {
+	// Environment var NS1_URL or the flag
+	var ns1Url string
+
+	if ns1Url = os.Getenv("NS1_URL"); ns1Url == "" {
+		ns1Url = *ns1UrlFlag
+	}
+
+	// Environment var FETCH_TIMEOUT or the flag
+	var fetchTimeout time.Duration
+
+	tempFetchTimeout := os.Getenv("FETCH_TIMEOUT")
+
+	// Parse the timeout as time.Duration
+	if tempFetchTimeout != "" {
+		fetchTimeout, _ = time.ParseDuration(tempFetchTimeout)
+	} else {
+		fetchTimeout = *fetchTimeoutFlag
+	}
+
+	if githubAuthor = os.Getenv("GITHUB_AUTHOR"); githubAuthor == "" {
+		githubAuthor = *githubAuthorFlag
+	}
+
+	if ns1Url == "" {
 		flag.Usage()
 		os.Exit(1)
 	}
 
 	// check if the fetch timeout is less than 30 seconds
-	if *fetchTimeout < 30*time.Second {
+	if fetchTimeout < 30*time.Second {
 		panic("fetch-timeout cannot be less than 30 seconds")
 	}
 
@@ -53,7 +78,7 @@ func main() {
 
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 
-	client := ns1.NewClient(nil, ns1.SetEndpoint(*ns1url))
+	client := ns1.NewClient(nil, ns1.SetEndpoint(ns1Url))
 
 	// listen for a keyboard interrupt of the key 'F'
 	// this will purge the cache and exit the program
@@ -68,8 +93,8 @@ func main() {
 			start := time.Now()
 			doWork(client)
 			log.Printf("Work took %s\n", time.Since(start))
-			log.Printf("Sleeping for %s\n", *fetchTimeout)
-			time.Sleep(*fetchTimeout)
+			log.Printf("Sleeping for %s\n", fetchTimeout)
+			time.Sleep(fetchTimeout)
 		}
 	}()
 
@@ -191,7 +216,7 @@ func pushToRepo(commitMessage string) {
 	cmd.Stderr = os.Stderr
 	cmd.Run()
 
-	author := *githubAuthor
+	author := githubAuthor
 
 	if author == "" {
 		author = "NS1 Changes Detector <ns1-changes@ops.vmminfra.local>"
