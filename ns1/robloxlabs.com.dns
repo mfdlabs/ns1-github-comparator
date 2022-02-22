@@ -1,10 +1,10 @@
 ;
 ;  Database file robloxlabs.com.dns for Default Zone scope in zone robloxlabs.com.
-;      Zone version:  1645054188
+;      Zone version:  1645548073
 ;
 
 @ 					  IN	SOA dns1.p08.nsone.net. hostmaster.nsone.net. (
-                        		1645054188         ; serial number
+                        		1645548073         ; serial number
                         		3600         ; refresh
                         		600         ; retry
                         		604800         ; expire
@@ -1391,6 +1391,7 @@ ruimoderation-2.sitetest3				600	IN	CNAME	web213.ra.roblox.com.
 ruimoderation-awa-2.sitetest3				60	IN	A	10.102.102.185
 ruiweb-2.sitetest3				600	IN	CNAME	web213.ra.roblox.com.
 ruiweb-awa-2.sitetest3				60	IN	A	10.102.102.185
+ruofanzhang-awa-735.sitetest3					  IN	CNAME	web735.awa.roblox.com.
 ruofanzhangweb-735.sitetest3				60	IN	CNAME	web735.awa.roblox.com.
 ryanweb-3.sitetest3				600	IN	CNAME	web214.ra.roblox.com.
 saadweb-3.sitetest3					  IN	CNAME	web214.ra.roblox.com.
