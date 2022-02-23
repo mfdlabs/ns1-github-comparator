@@ -16,8 +16,8 @@ import (
 	"syscall"
 	"time"
 
-	ns1 "gopkg.in/ns1/ns1-go.v2/rest"
-	"gopkg.in/ns1/ns1-go.v2/rest/model/dns"
+	ns1 "gopkg.in/nkpetko/ns1-go-dev.v2/rest"
+	"gopkg.in/nkpetko/ns1-go-dev.v2/rest/model/dns"
 )
 
 var (

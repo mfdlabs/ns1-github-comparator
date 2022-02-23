@@ -8,7 +8,6 @@ ENV GITHUB_AUTHOR=
 WORKDIR /opt/build
 
 COPY . .
-RUN go get gopkg.in/ns1/ns1-go.v2
 RUN go build -v -o /opt/build/ns1-github-comparator ./...
 
 # Ensure that git is installed
