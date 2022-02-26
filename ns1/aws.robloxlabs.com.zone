@@ -1,0 +1,57 @@
+;
+;  Database file aws.robloxlabs.com.zone for Default Zone scope in zone aws.robloxlabs.com.
+;      Zone version:  1626379608
+;
+
+@ 					  IN	SOA dns1.p01.nsone.net. hostmaster.nsone.net. (
+                        		1626379608         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p01.nsone.net.
+@ 					  IN	NS	dns2.p01.nsone.net.
+@ 					  IN	NS	dns3.p01.nsone.net.
+@ 					  IN	NS	dns4.p01.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+_16797d22de9165445555be2d7a145d81.tfe-dev				60	IN	CNAME	_c300bcc1d303eb406c6edccd81d47b9b.auiqqraehs.acm-validations.aws.
+_1a1dbe281ce6313cee3bba36910c120f.toolsatlantis				60	IN	CNAME	_dee819c8c465aeff385469af36aba86d.hkvuiqjoua.acm-validations.aws.
+_284009cf53eb204c027cc09e94762a92.snc1.statping				60	IN	CNAME	_2dff7718157e8eeb8dca82e407e4aa6f.bsgbmzkfwj.acm-validations.aws.
+_296046284b31ed53796bcfb6b2267c0c.cdn				60	IN	CNAME	_4dc5177052945f6c5498e55177ac7ef4.hkvuiqjoua.acm-validations.aws.
+_2fdd94b0eaf4a624d7e54ceef6f6ca01.ash1.statping				60	IN	CNAME	_38d56c9f3a12b50898eca75d00948338.mzlfeqexyx.acm-validations.aws.
+_803dfd2d4f32345695a5e4b8d16ebd64.chi1.statping				60	IN	CNAME	_f98ade9b3875d004bcf0917eb06dc61b.kirrbxfjtw.acm-validations.aws.
+_92464ef74ba374b5a08178d9b434d604.redash-backbone				60	IN	CNAME	_28dfd38f3cb875bf2160a73d357a0892.ltfvzjuylp.acm-validations.aws.
+_9e7bb764a029fe96735f895c49ed7854.terraform				60	IN	CNAME	_b47ca60d95420c8f364e5fd4e170f7b8.nhqijqilxf.acm-validations.aws.
+_b410b0f56c1b7c09bdaf3cd0ba11192f.chi1traffic.statping				60	IN	CNAME	_6650f8da5646fca3165859dabf6bd360.kirrbxfjtw.acm-validations.aws.
+_bd8288c9cc2241d952ef25a8bdf3e0b6.tfe-staging				60	IN	CNAME	_bf11769017ef6f10971ed858ba797d72.auiqqraehs.acm-validations.aws.
+_ccc075556a6220da670d09f1506b3540.redash				60	IN	CNAME	_495e20952dea7ef224a8f4f0c1daa053.hkvuiqjoua.acm-validations.aws.
+_cff8c5c807f4887ace2585eec297c749.analyticsatlantis				60	IN	CNAME	_25d65fa9c27b23b96172b9c9202fb175.hkvuiqjoua.acm-validations.aws.
+_d6f478a1a8630e79d470c76432e48f69.devrelatlantis				60	IN	CNAME	_bbcef9d7ca560e5e44aefa997d586b49.hkvuiqjoua.acm-validations.aws.
+_deab1f3134036bbbc3ff5e4820b237dd.tfe				60	IN	CNAME	_4d5b39d03c34532fef2128e77db5c479.auiqqraehs.acm-validations.aws.
+_ede6e92d30d959d036d9bacb2f273ce7.demo.statping				60	IN	CNAME	_fd60309ed2ca4fe8e293b19d7056e061.kirrbxfjtw.acm-validations.aws.
+analyticsatlantis				60	IN	CNAME	analyticsatlantis-1189055104.us-east-1.elb.amazonaws.com.
+ash1.statping				600	IN	CNAME	internal-statping-ash1-alb-952593456.us-east-1.elb.amazonaws.com.
+cdn				60	IN	CNAME	dh225lpl3fdyk.cloudfront.net.
+chi1.statping				600	IN	CNAME	internal-statping-chi1-alb-1338123571.us-east-2.elb.amazonaws.com.
+chi1traffic.statping				600	IN	CNAME	internal-statping-chi1traffic-alb-1510284445.us-east-2.elb.amazonaws.com.
+demo.statping				600	IN	CNAME	internal-statping-demo-alb-1786309759.us-east-2.elb.amazonaws.com.
+hinteractive				60	IN	CNAME	hinteractive.aws.robloxlabs.com.s3-website-us-east-1.amazonaws.com.
+kshawtest					  IN	CNAME	this_is_a_test_answer2.com.
+redash-backbone				60	IN	CNAME	redash-backbone-alb-1169038014.us-east-1.elb.amazonaws.com.
+redash				60	IN	CNAME	redash-alb-2054432173.us-east-1.elb.amazonaws.com.
+snc1.statping				600	IN	CNAME	internal-statping-snc1-alb-954691151.us-west-1.elb.amazonaws.com.
+test				60	IN	TXT	"This is a test 2"
+toolsatlantis				60	IN	CNAME	toolsatlantis-1763652420.us-west-1.elb.amazonaws.com.

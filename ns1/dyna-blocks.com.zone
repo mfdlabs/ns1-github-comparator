@@ -1,0 +1,33 @@
+;
+;  Database file dyna-blocks.com.zone for Default Zone scope in zone dyna-blocks.com.
+;      Zone version:  1606771054
+;
+
+@ 					  IN	SOA dns1.p02.nsone.net. hostmaster.nsone.net. (
+                        		1606771054         ; serial number
+                        		3600         ; refresh
+                        		600         ; retry
+                        		604800         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p02.nsone.net.
+@ 					  IN	NS	dns2.p02.nsone.net.
+@ 					  IN	NS	dns3.p02.nsone.net.
+@ 					  IN	NS	dns4.p02.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+*				60	IN	A	216.146.46.10
+*				60	IN	A	216.146.46.11
+@				60	IN	A	216.146.46.10
+@				60	IN	A	216.146.46.11

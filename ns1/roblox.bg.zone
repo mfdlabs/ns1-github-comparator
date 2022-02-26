@@ -1,0 +1,31 @@
+;
+;  Database file roblox.bg.zone for Default Zone scope in zone roblox.bg.
+;      Zone version:  1606771488
+;
+
+@ 					  IN	SOA dns1.p05.nsone.net. hostmaster.nsone.net. (
+                        		1606771488         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p05.nsone.net.
+@ 					  IN	NS	dns2.p05.nsone.net.
+@ 					  IN	NS	dns3.p05.nsone.net.
+@ 					  IN	NS	dns4.p05.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+@				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.
+www				300	IN	URLFWD	/* https://www.roblox.com/ 302 2 0.

@@ -1,0 +1,61 @@
+;
+;  Database file robloxlabs-cn.com.zone for Default Zone scope in zone robloxlabs-cn.com.
+;      Zone version:  1606772473
+;
+
+@ 					  IN	SOA dns1.p08.nsone.net. hostmaster.nsone.net. (
+                        		1606772473         ; serial number
+                        		3600         ; refresh
+                        		600         ; retry
+                        		604800         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p08.nsone.net.
+@ 					  IN	NS	dns2.p08.nsone.net.
+@ 					  IN	NS	dns3.p08.nsone.net.
+@ 					  IN	NS	dns4.p08.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+_dmarc					  IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:dmarc_fb@roblox.com; ruf=mailto:dmarc_fr@roblox.com; pct=100"
+accountsettings.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+api.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+assetgame.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+auth.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+authentication.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+avatar.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+avatarsite.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+badges.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+billing.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+billweb-3.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+catalog.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+chat.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+chatsite.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+clientsettings.api.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+develop.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+ecsv2.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+ephemeralcounters.api.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+friends.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+games.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+locale.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+notifications.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+presence.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+realtime.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+@					  IN	TXT	"np3moo8d47rj33hm6brehl34r"
+@					  IN	TXT	"v=spf1 -all"
+search.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+static.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+walterweb-3.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+web.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.
+www.sitetest3					  IN	CNAME	st3-2057131023.ap-southeast-1.elb.amazonaws.com.

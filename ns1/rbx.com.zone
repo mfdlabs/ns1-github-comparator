@@ -1,0 +1,268 @@
+;
+;  Database file rbx.com.zone for Default Zone scope in zone rbx.com.
+;      Zone version:  1645728636
+;
+
+@ 					  IN	SOA dns1.p07.nsone.net. hostmaster.nsone.net. (
+                        		1645728636         ; serial number
+                        		43200         ; refresh
+                        		7200         ; retry
+                        		1209600         ; expire
+                        		3600         ) ; default ttl
+
+;
+;  Zone NS records
+;
+
+@ 					  IN	NS	dns1.p07.nsone.net.
+@ 					  IN	NS	dns2.p07.nsone.net.
+@ 					  IN	NS	dns3.p07.nsone.net.
+@ 					  IN	NS	dns4.p07.nsone.net.
+@ 					  IN	NS	ns01.rbxinfra.net.
+@ 					  IN	NS	ns02.rbxinfra.net.
+@ 					  IN	NS	ns03.rbxinfra.net.
+@ 					  IN	NS	ns04.rbxinfra.net.
+
+;
+;  Zone records
+;
+
+*.artifactory-dr				60	IN	CNAME	internal-artifactory-lb-dr-1666184671.us-east-2.elb.amazonaws.com.
+*.artifactory-edge01				60	IN	CNAME	artifactory-lb-edge01-985143120.us-west-1.elb.amazonaws.com.
+*.artifactory-edge02				60	IN	CNAME	internal-artifactory-lb-edge02-2001956174.us-west-1.elb.amazonaws.com.
+*.artifactory-edge07				60	IN	CNAME	internal-artifactory-lb-edge07-949856073.us-west-1.elb.amazonaws.com.
+*.artifactory-edge1				60	IN	CNAME	artifactory-lb-edge01-985143120.us-west-1.elb.amazonaws.com.
+*.artifactory-edgemd				60	IN	CNAME	internal-artifactory-lb-edgemd-884610006.us-east-2.elb.amazonaws.com.
+*.artifactory-edgemd1				60	IN	CNAME	internal-artifactory-lb-edgemd1-1000229219.cn-north-1.elb.amazonaws.com.cn.
+*.artifactory-edgemdtest				60	IN	CNAME	internal-artifactory-lb-emdtest-188934990.us-east-2.elb.amazonaws.com.
+*.artifactory-prod1				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
+*.artifactory-stage7				60	IN	CNAME	internal-artifactory-lb-stage7-1255874446.us-west-1.elb.amazonaws.com.
+*.artifactory				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
+*.cortex-stage					  IN	CNAME	internal-alb-cortex-stage-974256828.us-west-1.elb.amazonaws.com.
+*.edge-artifactory				60	IN	CNAME	internal-test-arti-1362763877.us-west-1.elb.amazonaws.com.
+*.github-cli-stage				60	IN	CNAME	nlb-ghe-cli-stage-d151b419af0354cf.elb.us-west-1.amazonaws.com.
+*.github-dev				60	IN	CNAME	nlb-ghe-dev-601dc0a920bd9a66.elb.us-west-1.amazonaws.com.
+*.github-flow				60	IN	CNAME	nlb-ghe-flow-2df0b024fe62a773.elb.us-west-2.amazonaws.com.
+*.github-flow				60	IN	CNAME	alb-ghe-flow-external-2078157879.us-west-2.elb.amazonaws.com.
+*.github-prod1				60	IN	CNAME	nlb-ghe-prod1-ebbf0adba095bcd4.elb.us-west-1.amazonaws.com.
+*.github-stage				60	IN	CNAME	nlb-ghe-stage-0176df69dabeba6c.elb.us-west-1.amazonaws.com.
+*.github-stage				60	IN	CNAME	alb-ghe-stage-external-1143102232.us-west-1.elb.amazonaws.com.
+*.github-stage1				60	IN	CNAME	nlb-ghe-stage1-8955b895b5d0efda.elb.us-west-1.amazonaws.com.
+*.github				60	IN	CNAME	nlb-ghe-prod1-ebbf0adba095bcd4.elb.us-west-1.amazonaws.com.
+*.lgtm-poc				60	IN	CNAME	nlb-lgtm-poc-76b42972eeb0fac7.elb.us-west-1.amazonaws.com.
+*.lgtm-stage				60	IN	CNAME	nlb-lgtm-stage-c54f4ef62c5f2660.elb.us-west-2.amazonaws.com.
+44pxs64ghxyqnvfn56t2mapdv2bawqjb._domainkey					  IN	CNAME	44pxs64ghxyqnvfn56t2mapdv2bawqjb.dkim.amazonses.com.
+_07d736f427d12786311717ff75b2102f.drone				60	IN	CNAME	_2c09a6394be9865d03d911af9da98a13.bsgbmzkfwj.acm-validations.aws.
+_0b54c3cf6c8dca59939d62e737214293.artifactory				60	IN	CNAME	_b9720dcab65c1d70471a280bad6091cf.mzlfeqexyx.acm-validations.aws.
+_0edac843a28ae3fd1023a68da5d523d7.artifactory-edge07				60	IN	CNAME	_1c44313bb53eeddc030976e5f4d23732.rlltrpyzyf.acm-validations.aws.
+_0f37b3f6a030cd5e6a5b73f4b7a7f0f6.artifactory-edge01				60	IN	CNAME	_e552d9c50b3a783fab89c1b358e0baf8.vtqfhvjlcp.acm-validations.aws.
+_1873162c0f53bcf7e3f9a4f286db83e4.lockbox				60	IN	CNAME	_aa40754c405d2040ced07eb202901df7.gxwgcdsjsl.acm-validations.aws.
+_1a193ff2249998daf41c802a665092d2.certs					  IN	CNAME	_225da3d94a4843f359ed70c68661fb13.jfrzftwwjs.acm-validations.aws.
+_1b0beca0a42be207fd18827d205f7597.slackbot					  IN	CNAME	_ae5ef02ba497731db68054379cd89e20.gxwgcdsjsl.acm-validations.aws.
+_25f2afee1f95884351b311e5a9cacf8c.github-stage				60	IN	CNAME	_150417b6733d54279ef5046a901fcdca.mzlfeqexyx.acm-validations.aws.
+_2b30b371d1121313377a8186139d5f3d.github-stage1				60	IN	CNAME	_5ae641ed5d4f031ba4d185a2aeb62eaf.hkmpvcwbzw.acm-validations.aws.
+_2b631dd40610961ed6b6aab7830a1ce6.xray				60	IN	CNAME	_15cb850531a64ddf80b1de227b2d1d66.mzlfeqexyx.acm-validations.aws.
+_3386a5f3a14793a061df06c18897dcf0.jira				60	IN	CNAME	_c3404d6777e6f3eafb47b7132a46a28d.olprtlswtu.acm-validations.aws.
+_3806ba2641956effab925644e4fe29b7.teamcity-web				60	IN	CNAME	_b9253ba5e2c9b218a622a7fa8cd8db70.mzlfeqexyx.acm-validations.aws.
+_3ed763df821fb6413941beae7ef54d6f.jira-ros				60	IN	CNAME	_f82c2f98f19bf6c0de4a0b8f41faa5af.czrmfnbpdk.acm-validations.aws.
+_433db373121099e23cef7c488767ebc1.artifactory-edgemdtest				60	IN	CNAME	_9a949429ed1d4fcd28e60b944add786f.ymrbdtpxcr.acm-validations.aws.
+_434dc8c99edeaf776fdfa69f0578d7f6.drone-stage				60	IN	CNAME	_5a18b9432409ba6f3fc86957907993c1.zdxcnfdgtt.acm-validations.aws.
+_4c177383ea4fac77f450dfd812a62576.github				60	IN	CNAME	_654a40c7ca88e6cb5e191383541af18b.auiqqraehs.acm-validations.aws.
+_4d275bee426e18caa907912ad6516c90.artifactory-prod1				60	IN	CNAME	_52cef28114741eb2eca9a5ad490dceb3.zbkrxsrfvj.acm-validations.aws.
+_5d6c12eea472fef1ae5e05652ea7856a.github-dev				60	IN	CNAME	_0f51200bf9eded4cde8bbd3dff672d87.mzlfeqexyx.acm-validations.aws.
+_5ff6c959af8309fa1e59e4a66fb4e507.jfmc				60	IN	CNAME	_bf91d1d0d276de87f008f3a732b809a5.kirrbxfjtw.acm-validations.aws.
+_64f75c5c71f8ed6b9a2d475d3e3af4f3.tfe					  IN	CNAME	_23d50d1ca7b2325290fe28b0e402ea0f.jddtvkljgg.acm-validations.aws.
+_6b608c3a99b230724881cae4883fc8b8.lgtm-stage				60	IN	CNAME	_170f5d303fad0adeeef4e5a8ea3ebef0.tfmgdnztqk.acm-validations.aws.
+_6eecfa66e24b6e55af19f8f01fab3dd9.github-prod1				60	IN	CNAME	_07dddb81f1e95f74dfc5f324abce7986.zjfbrrwmzc.acm-validations.aws.
+_739cacfc37c72a5d0c640ca2865122d8.confluence-stage				60	IN	CNAME	_b6a41dff43d8ba226fc9695f2da6fb83.kirrbxfjtw.acm-validations.aws.
+_755562bd5783d11c8721f52518198e6f.ghesst				60	IN	CNAME	_bba2b6144224c8519e6104481b7c17f5.rlltrpyzyf.acm-validations.aws.
+_76e7c1106f73d6e97ea9f29de44f6958.sourcegraph-stage				60	IN	CNAME	_9cfc2bae5e9f0e49560ea80675e94c2a.zzxlnyslwt.acm-validations.aws.
+_8071c5147b59bacbaefff7fecc9041c1.xray-stage7				60	IN	CNAME	_8785b34926db6fc9f028946456aaaebd.rlltrpyzyf.acm-validations.aws.
+_849b9af3d615ddbebbc89f953e6ba320.github-cli-stage				60	IN	CNAME	_36d209791e3ac8ebe037c8e6ed1cb2d4.bsgbmzkfwj.acm-validations.aws.
+_882574d2a79f879259b2541cf7f84e34.artifactory-edge1				60	IN	CNAME	_232089c5d595c438705d726e9957720f.mzlfeqexyx.acm-validations.aws.
+_902a81240a6ff3abc065d90191a25e89.teamcity-stage				60	IN	CNAME	_3208902edc78e74144eaa304cdd05067.olprtlswtu.acm-validations.aws.
+_97b3d98785c59b0ae2117fc8bf7b883e.corp-assets					  IN	CNAME	_49592fd8e5b324c8ab2280babe74f85a.ykybfrwcxw.acm-validations.aws.
+_99e9c60a3a792bd89902fca4e55dab18.drone-ghc				60	IN	CNAME	_4249aa4deca58cb849288a115d468aaf.vtqfhvjlcp.acm-validations.aws.
+_9df800ad67b34130d1baa1faa56fb5ed.github-flow				60	IN	CNAME	_40a53c2e74d0105abd736cabf8ef279d.wggjkglgrm.acm-validations.aws.
+_a7a5bbda5a8179f630786b84ecdde602.fossa				60	IN	CNAME	_04ce9ac02b136082a68092bb1b2d90a5.zbkrxsrfvj.acm-validations.aws.
+_ac12e26be723b0fabde204b61f24555f.artifactory-edgemd				60	IN	CNAME	_43bc1573973aa3d9d200928cf0c5cd48.gxwgcdsjsl.acm-validations.aws.
+_ae764ad66172e42ac0e0407b02622320.artifactory-stage7				60	IN	CNAME	_54f34deef78bb75d486e809480dbdfdb.zbkrxsrfvj.acm-validations.aws.
+_amazonses					  IN	TXT	"gHr5dF15ww4Ia3DDiRzAljILnSpQ2wcseORbSpT4N0A="
+_b40658652989ead5ecd9e1dc9833225d					  IN	CNAME	_62f91b9258350ecb256cbe4c065bd697.hkvuiqjoua.acm-validations.aws.
+_b5c83352ec0d6c93d2b89207691f457f.jfmc-prod1				60	IN	CNAME	_d99880e1fba8374817d1a5268056d878.rlltrpyzyf.acm-validations.aws.
+_b78844bc43d511aed2def1689fd5a02b.confluence				60	IN	CNAME	_a8e0fc0d7ee2563bf8b5373f7e6de261.olprtlswtu.acm-validations.aws.
+_b890312e2594300f95dbf0801cf79c6e.artifactory-edgemd1				60	IN	CNAME	_c2aaffacf8861f38e4f144030f092ae7.zwqynhhtj.acm-validations.amazonaws.cn.
+_ba7424ecf6b1ce5d08dac03bb0a9371a.events					  IN	CNAME	_d67f0a5d36912404a79e3c2803dc7d21.ymrbdtpxcr.acm-validations.aws.
+_bc374ea71888695efea910076b43a71e.jfmc-stage7				60	IN	CNAME	_8fa60cbfdb2d8d316c5ea97e659714c0.wggjkglgrm.acm-validations.aws.
+_c1c3c3012fae82241d5745d3218a2ded.artifactory-dr				60	IN	CNAME	_bfe1440ebcbadd32a302c502b1129fe2.mzlfeqexyx.acm-validations.aws.
+_c4ba570c78444aae942271449db92543.artifactory-edge02				60	IN	CNAME	_d1f503e1cc80b1c2ab08025939482d4b.bwlshdtstt.acm-validations.aws.
+_cbc5bd52eacddb5d801b4ef5612111e0.pveinfluxdb				60	IN	CNAME	_7a66dbdfeb78949048228fbb69fa49d3.tjxrvlrcqj.acm-validations.aws.
+_ce4320be45baf330e44919b729fc2e97.status-stage				60	IN	CNAME	_1a92854e40910e62fdf99a3b97ff832b.xtsdcrbgyf.acm-validations.aws.
+_d0b08240dfe46605d86dc9a2ac0341da.jfrog-dist				60	IN	CNAME	_16b0b08a8420287428c74b2db9591cff.mzlfeqexyx.acm-validations.aws.
+_d54d3bb6e44af971c6da46c2099fe488.edge-artifactory				60	IN	CNAME	_d0f5bad62b43a876d69b261f62aa16ab.auiqqraehs.acm-validations.aws.
+_df4039a6fa642dc8f228f607b84ae594.sourcegraph				60	IN	CNAME	_6025f80e5460a9e076097b5b25b992d9.zzxlnyslwt.acm-validations.aws.
+_dmarc					  IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:dmarc_fb@roblox.com; ruf=mailto:dmarc_fr@roblox.com; pct=100"
+_e1a74b88c74ecf5b0aecfb88b2c9fd0e.fossa-stage				60	IN	CNAME	_9bf260a7879dbb7971c42281f66b0bf1.xtsdcrbgyf.acm-validations.aws.
+_e28ea6908828d4a766c69e4e743980ba.report				60	IN	CNAME	_86e1595e8f8f18fb31c80fc6d606a661.mjclfywhbs.acm-validations.aws.
+_e4ed3c2d79a11a2d839f9ad7e9d1f581.jira-stage				60	IN	CNAME	_638f418943879780ff17e19d47fedc4c.olprtlswtu.acm-validations.aws.
+_e650ea0cb4068bd0b2e6a8d259c417f1.confluence-dev				60	IN	CNAME	_d6e4cd9583c02cd7ff43feb79d73861c.nhqijqilxf.acm-validations.aws.
+_e86e677cd067078381eeaa7fbee4e8d8.xray-prod1				60	IN	CNAME	_059c309f737401c7ca5d0641f361ecec.rlltrpyzyf.acm-validations.aws.
+_ed3d72d3a1c3c22cec3befbfe5326912.ros					  IN	CNAME	_d52e9aceed6048fe06b4d3f9ec16dfcd.qqqfmgwtgn.acm-validations.aws.
+_ed5e38deb4c06d2b743f88db52e6336f.drone-dev				60	IN	CNAME	_0f1f1e83af8b5885d1de338de8ecf1e5.bsgbmzkfwj.acm-validations.aws.
+_f7b596fd9bf5ec91ae315414c1dfd18d.cortex-stage				60	IN	CNAME	_c6c6443586c3d934b84b92a804a613de.mjclfywhbs.acm-validations.aws.
+_f9bb3eadb322a501a112e85df298b737					  IN	CNAME	_e191dc0bfa351f5493b705f57a313595.jfrzftwwjs.acm-validations.aws.
+_ffdff1cf2a544246493c0eec7ecd2251.cachet-stage				60	IN	CNAME	_b11cf422439d7c689f35978d77eed91a.zzxlnyslwt.acm-validations.aws.
+airflow.operations					  IN	CNAME	f30d555a-5ae7-4134-9ed2-7b39da0b1256-vpce.c48.us-east-1.airflow.amazonaws.com.
+airhooks.ros					  IN	CNAME	a3e3ad27d8825488e87d889c21b63bb4-1128712488.us-east-1.elb.amazonaws.com.
+api.ros					  IN	CNAME	a3e3ad27d8825488e87d889c21b63bb4-1128712488.us-east-1.elb.amazonaws.com.
+argus				300	IN	A	34.96.126.204
+artifactory-dr				60	IN	CNAME	internal-artifactory-lb-dr-1666184671.us-east-2.elb.amazonaws.com.
+artifactory-edge01				60	IN	CNAME	artifactory-lb-edge01-985143120.us-west-1.elb.amazonaws.com.
+artifactory-edge02				60	IN	CNAME	internal-artifactory-lb-edge02-2001956174.us-west-1.elb.amazonaws.com.
+artifactory-edge07				60	IN	CNAME	internal-artifactory-lb-edge07-949856073.us-west-1.elb.amazonaws.com.
+artifactory-edge1				60	IN	CNAME	artifactory-lb-edge01-985143120.us-west-1.elb.amazonaws.com.
+artifactory-edgemd				60	IN	CNAME	internal-artifactory-lb-edgemd-884610006.us-east-2.elb.amazonaws.com.
+artifactory-edgemd1				60	IN	CNAME	internal-artifactory-lb-edgemd1-1000229219.cn-north-1.elb.amazonaws.com.cn.
+artifactory-edgemdtest				60	IN	CNAME	internal-artifactory-lb-emdtest-188934990.us-east-2.elb.amazonaws.com.
+artifactory-prod1				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
+artifactory-stage7				60	IN	CNAME	internal-artifactory-lb-stage7-1255874446.us-west-1.elb.amazonaws.com.
+artifactory				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
+autodiscover					  IN	CNAME	autodiscover.outlook.com.
+azdo					  IN	CNAME	ra-db109.roblox.local.
+bastion.operations					  IN	A	54.166.204.42
+bastion.ros					  IN	A	54.166.204.42
+bpo-vpn					  IN	A	103.142.220.4
+cachet-stage				60	IN	CNAME	internal-alb-cachet-stage-957820141.us-west-2.elb.amazonaws.com.
+certs					  IN	CNAME	internal-infosec-appviewx-861500791.us-west-1.elb.amazonaws.com.
+confluence-dev				60	IN	CNAME	internal-alb-confluence-dev-319244820.us-west-2.elb.amazonaws.com.
+confluence-dev				60	IN	CNAME	alb-confluence-dev-external-1601762086.us-west-2.elb.amazonaws.com.
+confluence-stage				60	IN	CNAME	internal-alb-confluence-stage-902676092.us-west-1.elb.amazonaws.com.
+confluence-stage				60	IN	CNAME	alb-confluence-stage-external-957253540.us-west-1.elb.amazonaws.com.
+confluence				60	IN	CNAME	internal-alb-confluence-prod-882433851.us-west-1.elb.amazonaws.com.
+confluence				60	IN	CNAME	alb-confluence-prod-external-254786143.us-west-1.elb.amazonaws.com.
+corp-assets					  IN	CNAME	ddmxdn2znp4n4.cloudfront.net.
+corp-metrics					  IN	CNAME	corp-metrics-1876859933.us-west-1.elb.amazonaws.com.
+cortex-stage				60	IN	CNAME	internal-alb-cortex-stage-974256828.us-west-1.elb.amazonaws.com.
+datalake.operations					  IN	CNAME	datalake-production.ctddksppuhh4.us-east-1.redshift.amazonaws.com.
+datalake.ros					  IN	CNAME	datalake-production.ctddksppuhh4.us-east-1.redshift.amazonaws.com.
+discourse					  IN	CNAME	rbx.hosted-by-discourse.com.
+drone-ghc				60	IN	CNAME	internal-drone-alb-drone-ghc-prod-1068064040.us-west-1.elb.amazonaws.com.
+drone-ghc				60	IN	CNAME	drone-drone-ghc-prod-ext-1919712126.us-west-1.elb.amazonaws.com.
+drone-stage				60	IN	CNAME	internal-drone-alb-drone-stage-1999568187.us-west-1.elb.amazonaws.com.
+drone				60	IN	CNAME	internal-drone-alb-drone-prod-335630544.us-west-1.elb.amazonaws.com.
+edge-artifactory				60	IN	CNAME	internal-test-arti-1362763877.us-west-1.elb.amazonaws.com.
+events					  IN	CNAME	roblox.bevylabs.com.
+explab.headspin					  IN	A	172.16.10.2
+forensics					  IN	A	34.96.126.204
+fossa-stage				60	IN	CNAME	internal-alb-fossa-stage-1833497810.us-west-1.elb.amazonaws.com.
+fossa-stage				60	IN	CNAME	alb-fossa-stage-external-357840842.us-west-1.elb.amazonaws.com.
+fossa				60	IN	CNAME	internal-alb-fossa-prod-three-1871497727.us-west-1.elb.amazonaws.com.
+fossa				60	IN	CNAME	alb-fossa-prod-three-external-1477191415.us-west-1.elb.amazonaws.com.
+ghesst				60	IN	CNAME	internal-ghesst-proxy-prod-alb-internal-252372537.us-west-1.elb.amazonaws.com.
+gilbert				30	IN	CNAME	localhost.
+github-cli-stage				60	IN	CNAME	nlb-ghe-cli-stage-d151b419af0354cf.elb.us-west-1.amazonaws.com.
+github-dev				60	IN	CNAME	nlb-ghe-dev-601dc0a920bd9a66.elb.us-west-1.amazonaws.com.
+github-flow				60	IN	CNAME	nlb-ghe-flow-2df0b024fe62a773.elb.us-west-2.amazonaws.com.
+github-flow				60	IN	CNAME	alb-ghe-flow-external-2078157879.us-west-2.elb.amazonaws.com.
+github-prod1				60	IN	CNAME	nlb-ghe-prod1-ebbf0adba095bcd4.elb.us-west-1.amazonaws.com.
+github-stage				60	IN	CNAME	nlb-ghe-stage-0176df69dabeba6c.elb.us-west-1.amazonaws.com.
+github-stage				60	IN	CNAME	alb-ghe-stage-external-1143102232.us-west-1.elb.amazonaws.com.
+github-stage1				60	IN	CNAME	nlb-ghe-stage1-8955b895b5d0efda.elb.us-west-1.amazonaws.com.
+github				60	IN	CNAME	nlb-ghe-prod1-ebbf0adba095bcd4.elb.us-west-1.amazonaws.com.
+hkg-full-gw.bpo-vpn					  IN	A	103.142.220.3
+hkg-gw.bpo-vpn					  IN	A	103.142.220.2
+iad-full-gw.bpo-vpn					  IN	A	204.13.170.3
+iad-gw.bpo-vpn					  IN	A	204.13.170.2
+jfmc-prod1				60	IN	CNAME	internal-jfmc-elb-prod1-662649703.us-west-1.elb.amazonaws.com.
+jfmc-stage7				60	IN	CNAME	internal-jfmc-elb-stage7-1717346659.us-west-1.elb.amazonaws.com.
+jfmc				60	IN	CNAME	internal-jfmc-elb-prod-90363764.us-west-1.elb.amazonaws.com.
+jfrog-dist				60	IN	CNAME	internal-jfrog-dist-elb-prod-925768953.us-west-1.elb.amazonaws.com.
+jira-ros				60	IN	CNAME	internal-alb-jira-ros-1796789483.us-west-1.elb.amazonaws.com.
+jira-ros				60	IN	CNAME	alb-jira-ros-external-1531434929.us-west-1.elb.amazonaws.com.
+jira-stage				60	IN	CNAME	internal-alb-jira-stage-1386194017.us-west-1.elb.amazonaws.com.
+jira-stage				60	IN	CNAME	alb-jira-stage-external-1400916564.us-west-1.elb.amazonaws.com.
+jira				60	IN	CNAME	internal-alb-jira-production-604631793.us-west-1.elb.amazonaws.com.
+jira				60	IN	CNAME	alb-jira-production-external-734362079.us-west-1.elb.amazonaws.com.
+lgtm-stage				60	IN	CNAME	nlb-lgtm-stage-c54f4ef62c5f2660.elb.us-west-2.amazonaws.com.
+lockbox					  IN	CNAME	awa-lweb1.roblox.local.
+luobu.artifactory				600	IN	A	10.102.95.231
+luobu.artifactory				600	IN	A	10.102.95.234
+mobilelab.headspin					  IN	A	172.16.10.2
+o2zyjyamugkz56xpg7geanpa5ixch6u7._domainkey					  IN	CNAME	o2zyjyamugkz56xpg7geanpa5ixch6u7.dkim.amazonses.com.
+o8.sg.tools					  IN	A	149.72.207.29
+ord-full-gw.vpn					  IN	A	204.13.169.3
+ord-gw.vpn					  IN	A	204.13.169.2
+p4-art					  IN	A	52.45.32.130
+presto.di					  IN	A	10.102.54.69
+pveinfluxdb				60	IN	CNAME	internal-alb-pveinfluxdb-prod-1812190531.us-west-1.elb.amazonaws.com.
+questions					  IN	CNAME	rblx.stackenterprise.co.
+rap					  IN	A	23.173.192.147
+@				300	IN	ALIAS	d24dxrz25dzt5h.cloudfront.net.
+@					  IN	MX	0 rbx-com.mail.protection.outlook.com.
+@				300	IN	TXT	"v=spf1 ip4:149.72.129.174 v=spf1 include:spf.protection.outlook.com -all"
+@				300	IN	TXT	"2vcg3rh96d5e1ha54voe887vjp"
+@				300	IN	TXT	"5z540dxzcsyy76zcyfpv59sllmllkhjk"
+@				300	IN	TXT	"MS=ms69229893"
+@				300	IN	TXT	"1od16oetmed8170egj2cgn0qsd"
+@				300	IN	TXT	"ZOOM_verify_y0TGvE-6TLizcxlhCyvyqg"
+rcity					  IN	A	99.83.133.196
+rcity					  IN	A	75.2.74.128
+report				60	IN	CNAME	internal-report-proxy-prod-alb-internal-1894838206.us-west-1.elb.amazonaws.com.
+roblox-api.headspin					  IN	A	172.16.10.2
+roblox-appium.headspin					  IN	A	172.16.10.2
+roblox-bridgeend.headspin					  IN	A	172.16.10.2
+roblox-data.headspin					  IN	A	172.16.10.2
+roblox-eventend.headspin					  IN	A	172.16.10.2
+roblox-grafana.headspin					  IN	A	172.16.10.2
+roblox-hubble.headspin					  IN	A	172.16.10.2
+roblox-internal-api.headspin					  IN	A	172.16.10.2
+roblox-mobileend.headspin					  IN	A	172.16.10.2
+roblox-mysql.headspin					  IN	A	172.16.10.2
+roblox-postgres.headspin					  IN	A	172.16.10.2
+roblox-redis.headspin					  IN	A	172.16.10.2
+roblox-uiend.headspin					  IN	A	172.16.10.2
+roblox-ulb.headspin					  IN	A	172.16.10.2
+roblox-unifiedcontroller-0.headspin					  IN	A	172.16.10.2
+roblox-us-sjc-0-display-1.headspin					  IN	A	172.16.10.5
+roblox-us-sjc-0-proxy-1-mac.headspin					  IN	A	172.16.10.3
+roblox-us-sjc-0-proxy-2-lin.headspin					  IN	A	172.16.10.4
+ros					  IN	CNAME	dmlmqyrzlplfj.cloudfront.net.
+s1._domainkey					  IN	CNAME	s1.domainkey.u9546762.wl013.sendgrid.net.
+s1._domainkey.tools					  IN	CNAME	s1.domainkey.u9873616.wl117.sendgrid.net.
+s2._domainkey					  IN	CNAME	s2.domainkey.u9546762.wl013.sendgrid.net.
+s2._domainkey.tools					  IN	CNAME	s2.domainkey.u9873616.wl117.sendgrid.net.
+scim-bridge					  IN	A	35.227.159.151
+scim				60	IN	A	35.227.159.151
+scimpro					  IN	A	35.238.195.182
+sea-full-gw.vpn					  IN	A	204.13.171.3
+sea-gw.vpn					  IN	A	204.13.171.2
+security					  IN	CNAME	ec2-13-57-253-77.us-west-1.compute.amazonaws.com.
+sftp-ms					  IN	CNAME	s-6feb70d556d44bf1a.server.transfer.us-west-1.amazonaws.com.
+sg					  IN	CNAME	u9546762.wl013.sendgrid.net.
+sg.tools					  IN	CNAME	u9873616.wl117.sendgrid.net.
+sjc-full-gw.vpn					  IN	A	204.13.168.3
+sjc-gw.vpn					  IN	A	204.13.168.2
+slackbot					  IN	CNAME	itops-slackbot-1293289018.us-west-1.elb.amazonaws.com.
+sourcegraph-stage				60	IN	CNAME	internal-alb-sourcegraph-stage-1025723831.us-west-1.elb.amazonaws.com.
+sourcegraph				60	IN	CNAME	internal-alb-sourcegraph-prod-3087256.us-west-1.elb.amazonaws.com.
+status-stage				60	IN	CNAME	alb-cachet-status-stage-external-662757714.us-west-2.elb.amazonaws.com.
+te6uvbuvkmyefcwq5j27o662wxvzzn5r._domainkey					  IN	CNAME	te6uvbuvkmyefcwq5j27o662wxvzzn5r.dkim.amazonses.com.
+teamcity-stage				60	IN	CNAME	internal-alb-teamcity-stage-1860859651.us-west-1.elb.amazonaws.com.
+teamcity-web				60	IN	CNAME	internal-alb-teamcity-web-2002129941.us-west-1.elb.amazonaws.com.
+test-url-both				60	IN	CNAME	dns-test-internal-elb-363077648.us-west-2.elb.amazonaws.com.
+test-url-both				60	IN	CNAME	dns-test-external-elb-252732462.us-west-2.elb.amazonaws.com.
+tfe-split					  IN	A	10.102.12.128
+tfe-stage					  IN	CNAME	stage-20200616153407532500000001-371487697.us-west-1.elb.amazonaws.com.
+tfe				60	IN	CNAME	prod-20200618133212708300000004-1548202540.us-west-1.elb.amazonaws.com.
+vpn					  IN	A	204.13.168.4
+vpn1-hkg1					  IN	A	27.111.160.142
+vpn1-iad1					  IN	A	149.97.216.78
+vpn1-nrt1					  IN	A	119.75.239.106
+vpn1-ord1					  IN	A	149.97.139.254
+vpn1-sea1					  IN	A	38.104.127.130
+vpn1-sjc1					  IN	A	149.97.184.58
+vpn2-nrt1					  IN	A	119.75.239.242
+wow					  IN	CNAME	traefik.service.chi1.consul.
+xray-prod1				60	IN	CNAME	internal-xray-elb-prod1-121513317.us-west-1.elb.amazonaws.com.
+xray-stage7				60	IN	CNAME	internal-xray-elb-stage7-1789750256.us-west-1.elb.amazonaws.com.
+xray				60	IN	CNAME	internal-xray-elb-prod-828331231.us-west-1.elb.amazonaws.com.
