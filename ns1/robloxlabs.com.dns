@@ -1,10 +1,10 @@
 ;
 ;  Database file robloxlabs.com.dns for Default Zone scope in zone robloxlabs.com.
-;      Zone version:  1645836320
+;      Zone version:  1645836841
 ;
 
 @ 					  IN	SOA dns1.p08.nsone.net. hostmaster.nsone.net. (
-                        		1645836320         ; serial number
+                        		1645836841         ; serial number
                         		3600         ; refresh
                         		600         ; retry
                         		604800         ; expire
@@ -731,6 +731,7 @@ gameinternationalization.gametest5				600	IN	CNAME	web209.ra.roblox.com.
 gameinternationalization.sitetest1				600	IN	CNAME	traefik.service.alpha.consul.
 gamejoin.gametest1				600	IN	CNAME	lb1.robloxlabs.com.
 gamejoin.sitetest1				60	IN	CNAME	lb1.robloxlabs.com.
+gamejoin.sitetest2					  IN	CNAME	lb2.robloxlabs.com.
 gamepasses.gametest1				600	IN	CNAME	lb1.robloxlabs.com.
 gamepasses.sitetest1				600	IN	CNAME	traefik.service.alpha.consul.
 gamepersistence.api.sitetest3				600	IN	CNAME	lbaas-private.robloxlabs.com.
