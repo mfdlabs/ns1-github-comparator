@@ -21,7 +21,7 @@ COPY .ssh/ops-user /root/.ssh/id_ed25519
 RUN chmod 600 /root/.ssh/id_ed25519
 
 RUN git config --global user.email "enterprise@git.mfdlabs.local"
-RUN git config --global user.name "enterprise"
+RUN git config --global user.name "Github Enterprise"
 
 # We will write a shell script to setup git and run the program
 RUN printf '#!/bin/bash\n\neval "$(ssh-agent -s)"\nssh-add /root/.ssh/id_ed25519\nssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts\ngit stash --include-untracked\ngit fetch --all\ngit reset --hard origin/master\n/opt/build/ns1-github-comparator' > /opt/build/run.sh

@@ -6,13 +6,13 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 
@@ -24,6 +24,7 @@ var (
 	ns1UrlFlag       = flag.String("ns1-url", "", "The URL for the NS1 API, warning: It has to be prepended with a slash or ns1 client will just strip out the last part of the URL")
 	fetchTimeoutFlag = flag.Duration("fetch-timeout", 30*time.Second, "The timeout for the fetch operation in the background, this cannot be less than 30 seconds")
 	githubAuthorFlag = flag.String("github-author", "", "The author name for the commit message")
+	isTestBranch     = flag.Bool("test-branch", false, "If this is a test branch, we will not push the changes to the master branch")
 )
 
 var githubAuthor string
@@ -141,9 +142,10 @@ func doWork(client *ns1.Client) {
 	// 2. Iterate over the zones and serialize them to json
 	for _, zone := range zones {
 		if checkAlreadyExistingSerial(zone.Zone, zone.Serial) {
-			log.Printf("Skipping zone %s, already up to date. Serial: %d\n", zone.Zone, zone.Serial)
 			continue
 		}
+
+		log.Printf("Fetching zone %s\n", zone.Zone)
 
 		// zone has to be rewritten here because it has minimal information
 		zone, _, err = client.Zones.Get(zone.Zone)
@@ -222,12 +224,36 @@ func pushToRepo(commitMessage string) {
 		author = "NS1 Changes Detector <ns1-changes@ops.vmminfra.local>"
 	}
 
-	cmd = exec.Command("git", "commit", "--author", author, "-m", "\""+commitMessage+"\"")
+	cmd = exec.Command("git", "commit", "--author", author, "-m", commitMessage)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Run()
 
-	cmd = exec.Command("git", "push", "origin", "master")
+	var branch string
+
+	if *isTestBranch {
+		branch = "ns1-dev"
+	} else {
+		branch = "master"
+	}
+
+	// Check if we're on the right branch, but put the output into a different buffer not stdout
+	writer := bytes.NewBuffer(nil)
+	cmd = exec.Command("git", "symbolic-ref", "--short", "HEAD")
+	cmd.Stdout = writer
+	cmd.Stderr = os.Stderr
+	cmd.Run()
+
+	if strings.TrimSpace(writer.String()) != branch {
+		// if we're not, switch to the right branch
+		// Checkout the branch if it's not the current branch
+		cmd = exec.Command("git", "checkout", branch)
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		cmd.Run()
+	}
+
+	cmd = exec.Command("git", "push", "origin", branch)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Run()
@@ -249,29 +275,16 @@ func writeToCache(json []byte, zone string, commitMessage *string) error {
 
 	// If the zone already exists in the output directory, we need to find differences between the two files and write them to the output directory.
 	if _, err := os.Stat("ns1_dns_json_cache/" + zone + ".json"); err == nil {
-		// We need to write this one to temp files while we compare the two files.
-		// then delete it from temp files when finished.
-
-		// 1. Write this json to a temp file
-		tmpFileName := "tmp_" + zone + ".json"
-		tmpFilePath := "ns1_dns_json_cache/" + tmpFileName
-		err := ioutil.WriteFile(tmpFilePath, json, 0644)
-
-		if err != nil {
-			return err
-		}
-
-		// 2. Check old file against new file
-		isDifferent := deepCompare(tmpFilePath, "ns1_dns_json_cache/"+zone+".json")
-
-		// 3. If the files are different, append the commit message.
-		if isDifferent {
-			*commitMessage += fmt.Sprintf("\n~The Zone (%s) was modified since the last check.\n", zone)
-		}
-
+		// We assume that the zone's serial was updated, so we need to write the new json to the cache directory
+		*commitMessage += fmt.Sprintf("\n~ The Zone (%s) was modified since the last check.\n", zone)
 	} else {
 		// the zone is new?? May still be on github, but not on cache.
-		*commitMessage += fmt.Sprintf("\n~The Zone (%s) was added since the last check.\n", zone)
+		// Check if the zone is not in the ns1/ directory
+		if _, err := os.Stat("ns1/" + zone + ".zone"); err != nil {
+			*commitMessage += fmt.Sprintf("\n~ The Zone (%s) was added since the last check.\n", zone)
+		} else {
+			*commitMessage += fmt.Sprintf("\n~ The Zone (%s) was modified since the last check.\n", zone)
+		}
 	}
 
 	// create the cache directory if it doesn't exist
@@ -296,45 +309,5 @@ func purgeCache() {
 
 	if err != nil {
 		log.Printf("Error purging cache: %s\n", err)
-	}
-}
-
-const chunkSize = 64000
-
-func deepCompare(file1, file2 string) bool {
-	// Check file size ...
-
-	f1, err := os.Open(file1)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f1.Close()
-
-	f2, err := os.Open(file2)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f2.Close()
-
-	for {
-		b1 := make([]byte, chunkSize)
-		_, err1 := f1.Read(b1)
-
-		b2 := make([]byte, chunkSize)
-		_, err2 := f2.Read(b2)
-
-		if err1 != nil || err2 != nil {
-			if err1 == io.EOF && err2 == io.EOF {
-				return true
-			} else if err1 == io.EOF || err2 == io.EOF {
-				return false
-			} else {
-				log.Fatal(err1, err2)
-			}
-		}
-
-		if !bytes.Equal(b1, b2) {
-			return false
-		}
 	}
 }
