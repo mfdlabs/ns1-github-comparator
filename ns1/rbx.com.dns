@@ -1,10 +1,10 @@
 ;
 ;  Database file rbx.com.dns for Default Zone scope in zone rbx.com.
-;      Zone version:  1645318439
+;      Zone version:  1645728636
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
-                        		1645318439         ; serial number
+@ 					  IN	SOA dns1.p07.nsone.net. hostmaster.nsone.net. (
+                        		1645728636         ; serial number
                         		43200         ; refresh
                         		7200         ; retry
                         		1209600         ; expire
@@ -38,6 +38,7 @@
 *.artifactory-prod1				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
 *.artifactory-stage7				60	IN	CNAME	internal-artifactory-lb-stage7-1255874446.us-west-1.elb.amazonaws.com.
 *.artifactory				60	IN	CNAME	internal-artifactory-lb-prod1-406523662.us-west-1.elb.amazonaws.com.
+*.cortex-stage					  IN	CNAME	internal-alb-cortex-stage-974256828.us-west-1.elb.amazonaws.com.
 *.edge-artifactory				60	IN	CNAME	internal-test-arti-1362763877.us-west-1.elb.amazonaws.com.
 *.github-cli-stage				60	IN	CNAME	nlb-ghe-cli-stage-d151b419af0354cf.elb.us-west-1.amazonaws.com.
 *.github-dev				60	IN	CNAME	nlb-ghe-dev-601dc0a920bd9a66.elb.us-west-1.amazonaws.com.

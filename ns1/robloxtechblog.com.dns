@@ -3,7 +3,7 @@
 ;      Zone version:  1643073125
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
+@ 					  IN	SOA dns1.p03.nsone.net. hostmaster.nsone.net. (
                         		1643073125         ; serial number
                         		43200         ; refresh
                         		7200         ; retry

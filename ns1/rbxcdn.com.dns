@@ -1,10 +1,10 @@
 ;
 ;  Database file rbxcdn.com.dns for Default Zone scope in zone rbxcdn.com.
-;      Zone version:  1644531180
+;      Zone version:  1645740972
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
-                        		1644531180         ; serial number
+@ 					  IN	SOA dns1.p04.nsone.net. hostmaster.nsone.net. (
+                        		1645740972         ; serial number
                         		3600         ; refresh
                         		600         ; retry
                         		604800         ; expire
@@ -63,6 +63,15 @@ c0ns1				300	IN	CNAME	c0ak.rbxcdn.com.
 c0rcc				300	IN	CNAME	c0hw.rbxcdn.com.
 c0rcc				300	IN	CNAME	c0cfly.rbxcdn.com.
 c0rcc				300	IN	CNAME	c0ak.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0hw.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0cfly.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0ak.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0hw.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0cfly.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0ak.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0hw.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0cfly.rbxcdn.com.
+c0rcc				300	IN	CNAME	c0ak.rbxcdn.com.
 c1				300	IN	CNAME	c1hw.rbxcdn.com.
 c1				300	IN	CNAME	c1cfly.rbxcdn.com.
 c1				300	IN	CNAME	c1ak.rbxcdn.com.
@@ -99,6 +108,15 @@ c1ns1				300	IN	CNAME	c1ak.rbxcdn.com.
 c1rcc				300	IN	CNAME	c1hw.rbxcdn.com.
 c1rcc				300	IN	CNAME	c1cfly.rbxcdn.com.
 c1rcc				300	IN	CNAME	c1ak.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1hw.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1cfly.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1ak.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1hw.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1cfly.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1ak.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1hw.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1cfly.rbxcdn.com.
+c1rcc				300	IN	CNAME	c1ak.rbxcdn.com.
 c2				300	IN	CNAME	c2hw.rbxcdn.com.
 c2				300	IN	CNAME	c2cfly.rbxcdn.com.
 c2				300	IN	CNAME	c2ak.rbxcdn.com.
@@ -128,6 +146,15 @@ c2ns1				300	IN	CNAME	c2ak.rbxcdn.com.
 c2ns1				300	IN	CNAME	c2hw.rbxcdn.com.
 c2ns1				300	IN	CNAME	c2cfly.rbxcdn.com.
 c2ns1				300	IN	CNAME	c2ak.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2hw.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2cfly.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2ak.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2hw.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2cfly.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2ak.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2hw.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2cfly.rbxcdn.com.
+c2rcc				300	IN	CNAME	c2ak.rbxcdn.com.
 c2rcc				300	IN	CNAME	c2hw.rbxcdn.com.
 c2rcc				300	IN	CNAME	c2cfly.rbxcdn.com.
 c2rcc				300	IN	CNAME	c2ak.rbxcdn.com.
@@ -163,6 +190,15 @@ c3ns1				300	IN	CNAME	c3ak.rbxcdn.com.
 c3rcc				300	IN	CNAME	c3hw.rbxcdn.com.
 c3rcc				300	IN	CNAME	c3cfly.rbxcdn.com.
 c3rcc				300	IN	CNAME	c3ak.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3hw.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3cfly.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3ak.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3hw.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3cfly.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3ak.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3hw.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3cfly.rbxcdn.com.
+c3rcc				300	IN	CNAME	c3ak.rbxcdn.com.
 c4				300	IN	CNAME	c4hw.rbxcdn.com.
 c4				300	IN	CNAME	c4cfly.rbxcdn.com.
 c4				300	IN	CNAME	c4ak.rbxcdn.com.
@@ -192,6 +228,15 @@ c4ns1				300	IN	CNAME	c4ak.rbxcdn.com.
 c4ns1				300	IN	CNAME	c4hw.rbxcdn.com.
 c4ns1				300	IN	CNAME	c4cfly.rbxcdn.com.
 c4ns1				300	IN	CNAME	c4ak.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4hw.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4cfly.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4ak.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4hw.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4cfly.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4ak.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4hw.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4cfly.rbxcdn.com.
+c4rcc				300	IN	CNAME	c4ak.rbxcdn.com.
 c4rcc				300	IN	CNAME	c4hw.rbxcdn.com.
 c4rcc				300	IN	CNAME	c4cfly.rbxcdn.com.
 c4rcc				300	IN	CNAME	c4ak.rbxcdn.com.
@@ -227,6 +272,15 @@ c5ns1				300	IN	CNAME	c5ak.rbxcdn.com.
 c5rcc				300	IN	CNAME	c5hw.rbxcdn.com.
 c5rcc				300	IN	CNAME	c5cfly.rbxcdn.com.
 c5rcc				300	IN	CNAME	c5ak.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5hw.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5cfly.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5ak.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5hw.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5cfly.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5ak.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5hw.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5cfly.rbxcdn.com.
+c5rcc				300	IN	CNAME	c5ak.rbxcdn.com.
 c6				300	IN	CNAME	c6hw.rbxcdn.com.
 c6				300	IN	CNAME	c6cfly.rbxcdn.com.
 c6				300	IN	CNAME	c6ak.rbxcdn.com.
@@ -259,6 +313,15 @@ c6ns1				300	IN	CNAME	c6ak.rbxcdn.com.
 c6rcc				300	IN	CNAME	c6hw.rbxcdn.com.
 c6rcc				300	IN	CNAME	c6cfly.rbxcdn.com.
 c6rcc				300	IN	CNAME	c6ak.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6hw.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6cfly.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6ak.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6hw.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6cfly.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6ak.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6hw.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6cfly.rbxcdn.com.
+c6rcc				300	IN	CNAME	c6ak.rbxcdn.com.
 c7				300	IN	CNAME	c7hw.rbxcdn.com.
 c7				300	IN	CNAME	c7cfly.rbxcdn.com.
 c7				300	IN	CNAME	c7ak.rbxcdn.com.
@@ -288,6 +351,15 @@ c7ns1				300	IN	CNAME	c7ak.rbxcdn.com.
 c7ns1				300	IN	CNAME	c7hw.rbxcdn.com.
 c7ns1				300	IN	CNAME	c7cfly.rbxcdn.com.
 c7ns1				300	IN	CNAME	c7ak.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7hw.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7cfly.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7ak.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7hw.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7cfly.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7ak.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7hw.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7cfly.rbxcdn.com.
+c7rcc				300	IN	CNAME	c7ak.rbxcdn.com.
 c7rcc				300	IN	CNAME	c7hw.rbxcdn.com.
 c7rcc				300	IN	CNAME	c7cfly.rbxcdn.com.
 c7rcc				300	IN	CNAME	c7ak.rbxcdn.com.
@@ -683,6 +755,15 @@ testns1				300	IN	CNAME	testak.rbxcdn.com.
 testns1				300	IN	CNAME	testhw.rbxcdn.com.
 testns1				300	IN	CNAME	testcfly.rbxcdn.com.
 testns1				300	IN	CNAME	testak.rbxcdn.com.
+testrcc				300	IN	CNAME	testhw.rbxcdn.com.
+testrcc				300	IN	CNAME	testcfly.rbxcdn.com.
+testrcc				300	IN	CNAME	testak.rbxcdn.com.
+testrcc				300	IN	CNAME	testhw.rbxcdn.com.
+testrcc				300	IN	CNAME	testcfly.rbxcdn.com.
+testrcc				300	IN	CNAME	testak.rbxcdn.com.
+testrcc				300	IN	CNAME	testhw.rbxcdn.com.
+testrcc				300	IN	CNAME	testcfly.rbxcdn.com.
+testrcc				300	IN	CNAME	testak.rbxcdn.com.
 testrcc				300	IN	CNAME	testhw.rbxcdn.com.
 testrcc				300	IN	CNAME	testcfly.rbxcdn.com.
 testrcc				300	IN	CNAME	testak.rbxcdn.com.

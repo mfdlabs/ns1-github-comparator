@@ -1,10 +1,10 @@
 ;
 ;  Database file robloxlabs.com.dns for Default Zone scope in zone robloxlabs.com.
-;      Zone version:  1645548073
+;      Zone version:  1645836320
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
-                        		1645548073         ; serial number
+@ 					  IN	SOA dns1.p08.nsone.net. hostmaster.nsone.net. (
+                        		1645836320         ; serial number
                         		3600         ; refresh
                         		600         ; retry
                         		604800         ; expire
@@ -274,8 +274,8 @@ api.gametest3				60	IN	CNAME	web288.ra.roblox.com.
 api.gametest4				60	IN	CNAME	web125.p1t.roblox.com.
 api.gametest5				60	IN	CNAME	web209.ra.roblox.com.
 api.justindemo-awa-2.sitetest3				60	IN	A	10.102.102.185
-api.sitetest1				60	IN	CNAME	traefik.service.alpha.consul.
-api.sitetest2				60	IN	CNAME	traefik.service.alpha.consul.
+api.sitetest1				60	IN	CNAME	lb1.robloxlabs.com.
+api.sitetest2				60	IN	CNAME	lb2.robloxlabs.com.
 api.sitetest3				60	IN	CNAME	lbaas-public-st3.sitetest3.robloxlabs.com.
 api.sitetest4				60	IN	CNAME	web2.sm.roblox.com.
 apis-cdn				300	IN	A	128.116.105.4
@@ -1392,6 +1392,7 @@ ruimoderation-awa-2.sitetest3				60	IN	A	10.102.102.185
 ruiweb-2.sitetest3				600	IN	CNAME	web213.ra.roblox.com.
 ruiweb-awa-2.sitetest3				60	IN	A	10.102.102.185
 ruofanzhang-awa-735.sitetest3					  IN	CNAME	web735.awa.roblox.com.
+ruofanzhangweb-525.sitetest3				60	IN	CNAME	web525.snc2.roblox.com.
 ruofanzhangweb-735.sitetest3				60	IN	CNAME	web735.awa.roblox.com.
 ryanweb-3.sitetest3				600	IN	CNAME	web214.ra.roblox.com.
 saadweb-3.sitetest3					  IN	CNAME	web214.ra.roblox.com.
@@ -1534,7 +1535,7 @@ test.sitetest1				60	IN	CNAME	traefik.service.alpha.consul.
 testredirect				60	IN	URLFWD	/ https://www.roblox.com 302 2 0.
 textfilter.api.sitetest3				60	IN	CNAME	lbaas-private-st3.sitetest3.robloxlabs.com.
 textfilter.gametest1				60	IN	CNAME	api.gametest1.robloxlabs.com.
-textfilter.sitetest1				60	IN	CNAME	traefik.service.alpha.consul.
+textfilter.sitetest1				60	IN	CNAME	lb2.robloxlabs.com.
 textfilter.sitetest4				60	IN	CNAME	api.sitetest4.robloxlabs.com.
 textfiltering.api.gametest1				600	IN	CNAME	lb1.robloxlabs.com.
 textprocessing.api.gametest1				600	IN	CNAME	lb1.robloxlabs.com.

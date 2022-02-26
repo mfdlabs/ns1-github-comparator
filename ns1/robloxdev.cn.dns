@@ -1,10 +1,10 @@
 ;
 ;  Database file robloxdev.cn.dns for Default Zone scope in zone robloxdev.cn.
-;      Zone version:  1642187185
+;      Zone version:  1645739678
 ;
 
-@ 					  IN	SOA . hostmaster.nsone.net. (
-                        		1642187185         ; serial number
+@ 					  IN	SOA dns1.p06.nsone.net. hostmaster.nsone.net. (
+                        		1645739678         ; serial number
                         		43200         ; refresh
                         		7200         ; retry
                         		1209600         ; expire
@@ -30,6 +30,7 @@
 *.api					  IN	CNAME	prod-gateway-out.robloxdev.cn.
 *.rbxcdn					  IN	CNAME	prod-gateway-out.robloxdev.cn.
 *.s				600	IN	CNAME	any.s.robloxdev.cn.d.rbxinfra.cn.
+_dnsauth					  IN	TXT	"2022022309411541q5by7xa69epuuuhz5jkj3u65gc0n4h3d9nhayrwqkzew4rez"
 api					  IN	CNAME	prod-gateway-out.robloxdev.cn.
 c0.c				600	IN	CNAME	c0.c.robloxdev.cn.d.rbxinfra.cn.
 c1.c				600	IN	CNAME	c1.c.robloxdev.cn.d.rbxinfra.cn.
