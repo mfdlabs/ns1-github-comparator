@@ -39,7 +39,7 @@ jobs:
 
     # Pushes 2 identical images to the registry, one with the tag latest and one with the version from git-ref
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.inputs.ref || github.ref }}
 
