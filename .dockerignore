@@ -1,0 +1,11 @@
+*
+!main.go
+!go.mod
+!go.sum
+!LICENSE
+!README.md
+!.gitignore
+!run.sh
+!src
+!Makefile
+!resources

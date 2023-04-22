@@ -1,0 +1,5 @@
+.cache
+.ssh
+nomad/custom
+bin
+.vscode

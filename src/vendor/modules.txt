@@ -1,0 +1,53 @@
+# github.com/davecgh/go-spew v1.1.0
+## explicit
+github.com/davecgh/go-spew/spew
+# github.com/golang/glog v1.0.0
+## explicit; go 1.11
+github.com/golang/glog
+# github.com/golang/protobuf v1.3.1
+## explicit
+github.com/golang/protobuf/proto
+# github.com/pmezard/go-difflib v1.0.0
+## explicit
+github.com/pmezard/go-difflib/difflib
+# github.com/r3labs/diff/v3 v3.0.0
+## explicit; go 1.13
+github.com/r3labs/diff/v3
+# github.com/sendgrid/rest v2.6.9+incompatible
+## explicit
+github.com/sendgrid/rest
+# github.com/sendgrid/sendgrid-go v3.11.1+incompatible
+## explicit
+github.com/sendgrid/sendgrid-go
+github.com/sendgrid/sendgrid-go/helpers/mail
+# github.com/stretchr/objx v0.1.0
+## explicit
+github.com/stretchr/objx
+# github.com/stretchr/testify v1.5.1
+## explicit; go 1.13
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/mock
+github.com/stretchr/testify/require
+# github.com/vmihailenco/msgpack v4.0.4+incompatible
+## explicit
+github.com/vmihailenco/msgpack
+github.com/vmihailenco/msgpack/codes
+# golang.org/x/net v0.0.0-20220909164309-bea034e7d591
+## explicit; go 1.17
+golang.org/x/net/context
+# google.golang.org/appengine v1.6.6
+## explicit; go 1.11
+google.golang.org/appengine
+google.golang.org/appengine/datastore
+google.golang.org/appengine/datastore/internal/cloudkey
+google.golang.org/appengine/datastore/internal/cloudpb
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/app_identity
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/modules
+google.golang.org/appengine/internal/remote_api
+# gopkg.in/yaml.v2 v2.2.2
+## explicit
+gopkg.in/yaml.v2
