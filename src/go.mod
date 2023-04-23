@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/golang/glog v1.0.0
 	github.com/r3labs/diff/v3 v3.0.1
-	github.com/sendgrid/sendgrid-go v3.11.1+incompatible
+	github.com/sendgrid/sendgrid-go v3.12.0+incompatible
 	github.com/stretchr/testify v1.6.1
 )
 
