@@ -6,7 +6,7 @@ require (
 	github.com/golang/glog v1.1.1
 	github.com/r3labs/diff/v3 v3.0.1
 	github.com/sendgrid/sendgrid-go v3.12.0+incompatible
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.8.3
 )
 
 require (
